@@ -10,7 +10,7 @@ body {
   margin-right: 10px;
 }
 
-/* Add your own custom styles here */
+.bkcvr {width: 325px; height: 420px;padding-left: .2%;}
 
 nav{
   display: flex;
