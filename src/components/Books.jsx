@@ -6,7 +6,8 @@ const Books = ({books, book}) => {
     return(
         <div>
             <br></br>
-             Search: <SearchBar books={books}/>
+            <div className="Searchbr"> Search: <SearchBar books={books}/></div>
+            
 
             <h1>Books</h1>
             <ul>
