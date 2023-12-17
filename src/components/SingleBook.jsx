@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import CheckOut from "../CheckOut";
 
 const SingleBook = ({books}) => {
 
@@ -18,11 +19,12 @@ const SingleBook = ({books}) => {
 
     return (
 
-        <div> 
+        <div className="boosn"> 
             <h1>{book.title}</h1>
            <img className="bkcvr" src={book.coverimage}/>
            <h2>By: {book.author}</h2>
            <p>{book.description}</p>
+           <CheckOut books={books}/>
            <h3>Availability: {bookShelf}</h3>
            <Link to='/books'>
              Back to Books

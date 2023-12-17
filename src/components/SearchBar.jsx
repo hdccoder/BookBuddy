@@ -1,20 +1,26 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SearchBar = ({books}) => {
     const [searchBook, setSearchBook] = useState('')
 
     const filteredBooks = books.filter((book) => {
-        return book.title.indexOf(searchBook) !== -1
+        const lowercaseTitle= book.title.toLowerCase()
+        const lowercaseSearchBar = searchBook.toLowerCase()
+        return lowercaseTitle.indexOf(lowercaseSearchBar)!== -1
     })
+
 
     return (
         <div>
             <label>
+            <span className="srchb">
             <input
                 type="text"
                 value={searchBook}
                 onChange={(event) => {setSearchBook(event.target.value)}}
             />
+            </span>
             </label>
             {
                 searchBook.length > 0 ?
@@ -23,7 +29,10 @@ const SearchBar = ({books}) => {
                     <ul>
                         {
                             filteredBooks.map((book) => {
-                                return <li key={book.id}>{book.title}</li>
+                                return <Link key={book.id} to={`/books/${book.id}`}>{book.title}</Link>
+                              
+                             
+                              
                             })
                         }
                     </ul>

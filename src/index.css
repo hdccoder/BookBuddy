@@ -1,10 +1,20 @@
 body {
+  background-image: url('./pics/pexels-anouar-olh-1730560.jpg') ; background-size: cover; background-attachment: fixed;
   font-family: Georgia, serif;
   background-color: #f8f8f8;
   margin: 0;
   padding: 0;
 }
 
+h3 {color: rgb(255, 255, 255); font-family: cursive; font-size: 250%;}
+
+h2 {color: rgb(255, 255, 255); font-family: cursive; font-size: 250%;}
+
+p {color: rgb(255, 255, 255); font-family: cursive; font-size: 215%;}
+
+.bklk {color:  rgb(255, 252, 252); font-family: cursive; font-size: 315%;text-decoration: none;border: 2px}
+
+h1 {color: rgb(255, 255, 255); font-family: cursive; font-size: 315%;}
 #logo-image {
   width: 30px;
   margin-right: 10px;
@@ -15,8 +25,10 @@ body {
 nav{
   display: flex;
   justify-content: space-around;
-  background-color: lightgreen;
+  background-color: rgba(196, 204, 206, 0.881);
 }
+
+.hmpg {color: rgb(255, 255, 255); font-family: cursive; font-size: 315%; text-align: center;}
 
 nav span{
   display: flex;
@@ -24,10 +36,16 @@ nav span{
 }
 
 nav a{
+  color:  rgb(255, 255, 255);
   padding: 1rem;
+  font-family: cursive;
+  font-size: 225%;
+  text-decoration: none;
 }
 
 .registerForm {
   display: flex;
   flex-wrap: wrap;
 }
+
+.boosn {}

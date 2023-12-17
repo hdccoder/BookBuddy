@@ -10,7 +10,7 @@ import Account from './components/Account'
 import SuccessRegi from './components/SuccessRegi'
 import Homepage from './components/Homepage'
 import SingleBook from './components/SingleBook'
-import SearchBar from './components/SearchBar'
+
 
 function App() {
   const [token, setToken] = useState(null)
@@ -44,7 +44,7 @@ function App() {
 
   useEffect(() => {
     const fetchBooks = async () => {
-      const {data} = await axios('https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/books')
+      const {data} = await axios.get('https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/books')
      setBooks(data.books)
     }
     fetchBooks()
@@ -55,9 +55,8 @@ function App() {
     <>
     <h1><img id='logo-image' src={bookLogo}/><Link to='/'>Library App</Link></h1>
     <Navigations user={user}/>
-     Search: <SearchBar books={books}/>
     <Routes>
-      <Route path='/' element={<Homepage/>}/>
+      <Route path='/' element={<Homepage user={user}/>} />
       <Route path='/successReg' element={<SuccessRegi />}/>
       <Route path='/books' element={<Books books={books}/>}/>
       <Route path='/books/:id' element={<SingleBook books={books}/>}/>
